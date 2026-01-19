@@ -8,8 +8,7 @@ public class Adventure{
     System.out.print("Gib deinen Namen ein: " + ForeColor.GREEN);
     Scanner sc = new Scanner(System.in);
     System.out.print(ForeColor.RESET);
-    
-    Room tavern = new Room("Taverne", "Es ist sehr laut und unrhuig.", true, "Der Wirt schiebt dir einen Zettel zu.", (Item) null);
+
     p = new Player(sc.next(), 100, RoomDefinitions.starter_field);
     p.getCurrentRoom().describe();
     
@@ -29,12 +28,14 @@ public class Adventure{
         case "search":
           p.getCurrentRoom().search();
           break;
-        case "use": 
-          
+        case "use":
           break;
-        default: 
-          
-      } // end of switch
+        case "help":
+          System.out.println("---------------[ HELP PAGE ]---------------");
+          break;
+        default:
+          System.out.println(ForeColor.RED + "Unknown Command or Syntax Error!\nUse \"help\" to get a list of all possible commands!" + ForeColor.RESET);
+      }
     }
   }
 }

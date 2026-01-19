@@ -18,13 +18,10 @@ public class Room{
     this.firstEnterMessage = firstEnterMessage;
 
     // Array Shenanigans
-    List<Item> lootList = Arrays.asList(loot);
-    if(!lootList.isEmpty()){
-      inventory = new ArrayList<>(lootList); // WTF
-    }
+    inventory = new ArrayList<>(Arrays.asList(loot));
   }
   public void describe(){
-    System.out.println("Du befindest dich in: " + name);
+    System.out.println("Du befindest dich in: " + getName());
     System.out.println(description);
   }
   public void search(){
