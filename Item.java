@@ -9,7 +9,7 @@ public class Item{
     this.weight = weight;
   }
   public String getName(){
-    return name;
+    return ForeColor.LIGHT_BLUE + name + ForeColor.RESET;
   }
   public void describe(){
     System.out.println("Du hältst " + name + " in deinen Händen.\n" + description + "\nGewicht: " + weight);
