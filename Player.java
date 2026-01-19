@@ -28,13 +28,7 @@ public class Player{
   public Room getCurrentRoom(){
     return currentRoom;
   }
-  public void movetoRoom(Room targetRoom){
-    if(!targetRoom.getUnlocked()){
-      System.out.println("Du kannst diesen Raum nicht betreten!");
-      return;
-    }
-    currentRoom = targetRoom;
-    currentRoom.describe();
-    currentRoom.hasBeenEntered = true;
+  public String getName(){
+    return ForeColor.GREEN + this.name + ForeColor.RESET;
   }
 }
