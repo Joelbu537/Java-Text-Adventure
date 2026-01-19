@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Adventure{
   public static void main(String[] args){
-    System.out.println("\u001B[31mWilkommen zum " + Color.GREEN + "Text-Adventure!\n\n" + Color.RESET);
+    System.out.println("Wilkommen zum " + ForeColor.GREEN + "Text-Adventure" + ForeColor.RESET + "!\n");
     System.out.print("Gib deinen Namen ein: ");
     Scanner sc = new Scanner(System.in);
     
