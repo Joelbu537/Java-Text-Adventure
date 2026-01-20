@@ -1,5 +1,5 @@
 public class Player{
-  private String name;
+  private final String name;
   private double hp;
   private double maxHP;
   private Room currentRoom;
@@ -11,18 +11,18 @@ public class Player{
     this.currentRoom = startingRoom;
   }
   public void status(){
-    System.out.print(name + " ist ");
+    System.out.print(name + " is ");
     if(hp < 25){
-      System.out.println(" stark verletzt");
+      System.out.println(BackColor.RED + "badly injured" +BackColor.RESET);
     }
     else if(hp < 50) {
-      System.out.println(" verletzt");
+      System.out.println(ForeColor.LIGHT_RED + "injured" + ForeColor.RESET);
     }
     else if(hp < 75){
-      System.out.println(" leicht verletzt");
+      System.out.println(ForeColor.YELLOW + "lightly injured" + ForeColor.RESET);
     }
     else{
-      System.out.println(" gesund");
+      System.out.println(ForeColor.LIGHT_GREEN + "healthy" + ForeColor.RESET);
     }
   }
   public Room getCurrentRoom(){

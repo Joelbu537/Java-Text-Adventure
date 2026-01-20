@@ -21,16 +21,16 @@ public class Room{
     inventory = new ArrayList<>(Arrays.asList(loot));
   }
   public void describe(){
-    System.out.println("Du befindest dich in: " + getName());
+    System.out.println("You are here: " + getName());
     System.out.println(description);
   }
   public void search(){
-    System.out.println(Adventure.p.getName() + " durchsucht " + this.getName() + "...");
+    System.out.println(Adventure.p.getName() + " is searching " + this.getName() + "...");
     if(inventory.isEmpty()){
-      System.out.println(Adventure.p.getName() + " findet nichts");
+      System.out.println(Adventure.p.getName() + " does not find anything");
       return;
     }
-    System.out.println(Adventure.p.getName() + " findet:");
+    System.out.println(Adventure.p.getName() + " finds:");
       for (Item item : inventory) {
           System.out.println(item.name);
       }
